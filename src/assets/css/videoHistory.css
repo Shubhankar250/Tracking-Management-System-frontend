@@ -1,0 +1,613 @@
+/* ROOT */
+
+/* SIDEBAR */
+.vh-sidebar {
+  width: 300px;
+  padding: 16px;
+  background: #fff;
+  border-right: 1px solid #ddd;
+}
+
+.vh-title {
+  color: #94a3b8;
+  border-bottom: 1px solid #94a3b8;
+}
+
+.vh-sidebar label {
+
+  display: block;
+  font-size: 15px;
+ color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+.vh-sidebar select,
+.vh-sidebar input {
+     height: 38px;
+    padding: 0 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 15px;
+    min-width: 280px;
+     margin-bottom: 10px;
+}
+.vh-sidebar select,
+.vh-sidebar input[type="date"] {
+  width: 100%;
+  box-sizing: border-box;   /* IMPORTANT */
+  height: 35px;             /* same visual height */
+  padding: 6px 8px;
+  font-size: 13px;
+}
+.vh-sidebar input:focus,
+.vh-sidebar select:focus {
+  border-color: #3b82f6;       /* blue focus */
+}
+.vh-sidebar input[type="date"]:focus {
+  outline: none;                 /* remove default */
+  border: 1px solid #3b82f6;     /* force border */
+}
+
+.vh-load-btn {
+  margin-top: 12px;
+  width: 100%;
+  background: #2d6cdf;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.vh-tips {
+  margin-top: 16px;
+  background: #0b132b;
+  color: #fff;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.vh-tips ul {
+  padding-left: 16px;
+  font-size: 12px;
+}
+
+
+
+/* VIDEO */
+.vh-video {
+ flex: 1;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  background: #000;
+
+  display: flex;
+  flex-direction: column;
+
+  height: 420px;
+  overflow: hidden;
+}
+
+.vh-video-text {
+  color: #9aa0a6;
+  text-align: center;
+  margin-top: 20%;
+}
+
+
+.vh-controls button {
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 5px 7px;
+}
+
+.vh-time {
+  color: #fff;
+  margin: 0 8px;
+}
+
+.vh-seek {
+  background: #ffc107 !important;
+  color: #000 !important;
+}
+
+/* BOTTOM */
+.vh-bottom {
+  height: 220px;
+  background: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 14px;
+  margin-top: 10px;
+}
+
+.vh-tabs {
+  padding: 8px 12px;
+}
+
+.vh-tabs button {
+  background: none;
+  border: none;
+  color: #aaa;
+  margin-right: 12px;
+}
+
+.vh-tabs .active {
+  color: #2d6cdf;
+   border-bottom: 1px solid #2d6cdf;
+  font-weight: 600;
+}
+
+.vh-table {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 12px;
+}
+
+.vh-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.vh-table th,
+.vh-table td {
+  padding: 8px;
+  border-bottom: 1px solid #1e2a45;
+  text-align: center;
+}
+
+.vh-ok {
+  color: #4caf50;
+}
+.vh-speed{
+    color: #fff;
+}
+.vh-controls {
+height: 50px;              /* 🔥 FIXED HEIGHT */
+  width: 100%;
+  background: #111;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+/* LEFT */
+.vh-controls-left {
+  display: flex;
+  gap: 6px;
+}
+
+/* CENTER */
+.vh-controls-center {
+  display: flex;
+  gap: 8px;
+  margin: 0 auto; /* 🔥 center me fix */
+  align-items: center;
+}
+
+/* RIGHT */
+.vh-controls-right {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.vh-controls-right input {
+  width: 90px;
+  padding: 4px 6px;
+}
+
+
+.vh-time-panel {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+
+.vh-timeline {
+  display: flex;          /* 🔥 MAIN FIX */
+  flex-direction: row;
+  white-space: nowrap;
+  height: 100%;
+}
+.vh-day {
+  width: 100%;    /* ⬅ pehle 480px tha */
+  padding-right: 12px;
+  border-right: none;   /* ❌ vertical underline hata diya */
+}
+.vh-hours {
+  display: flex;          /* 🔥 HOURS HORIZONTAL */
+  flex-direction: row;
+  gap: 32px;
+  padding: 6px 8px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.vh-day-label {
+  padding: 6px 8px;
+  font-size: 13px;
+  font-weight: 600;
+
+}
+.vh-wrapper {
+  display: flex;
+  height: calc(100vh - 80px);
+  overflow-x: hidden;   /* 🔥 PAGE KO BACHATA HAI */
+}
+.vh-right {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;   /* 🔥 */
+  min-width: 0;         /* 🔥 FLEXBOX KILL SWITCH */
+   padding: 10px;
+}
+.vh-bottom-content {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;     /* 🔥 SCROLL SIRF ANDAR */
+  display: flex;
+  margin: 4px;
+}
+.vh-timeline-wrapper {
+  flex: 1;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: 166px;
+}
+.vh-timeline-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.vh-timeline-wrapper::-webkit-scrollbar-track {
+  background: #000;
+}
+
+.vh-timeline-wrapper::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 4px;
+}
+
+.vh-timeline-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+#jessibucaWrap {
+  position: relative;
+  width: 100%;
+  flex: 1;                /* 🔥 IMPORTANT */
+  display: flex;          /* 🔥 */
+  min-height: 0;          /* 🔥 */
+  background: url("../../assets/images/video2.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+#jessibuca {
+  flex: 1;              
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+#jessibucaWrap video {
+  width: 100% !important;
+  height: auto !important;   /* 🔥 CHANGE */
+  object-fit: contain;
+  display: block;
+}
+.vh-track {
+  position: relative;
+  height: 50px;
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  margin: 10px 8px;
+}
+
+.vh-hour-marker {
+  position: absolute;
+  top: -18px;
+  font-size: 11px;
+  color: #aaa;
+}
+
+.vh-hour-marker:nth-child(n) {
+  transform: translateX(-50%);
+}
+
+.vh-track .vh-hour-marker {
+  width: calc(100% / 24);
+  text-align: center;
+}
+
+.vh-segment {
+  position: absolute;
+  top: 15px;
+  height: 20px;
+  background: #2563eb;   /* 🔵 Blue Recording Bar */
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.vh-segment:hover {
+  background: #1d4ed8;
+}
+.video-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  font-size: 18px;
+  text-align: center;
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0.8;
+}
+
+.vh-loader-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.vh-loader-content {
+  text-align: center;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #007bff;   /* blue */
+  border-top: 4px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: auto;
+}
+
+.vh-loader-content p {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #fff;  /* blue text */
+  font-weight: 500;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.vh-action-cell {
+  display: flex;
+  gap: 8px;
+  justify-content:center;
+}
+
+/* Base button style */
+.vh-icon-btn {
+  width: 36px;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+/* PLAY button */
+.vh-play {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.vh-play:hover {
+  background: #007bff;
+  color: #ffffff;
+}
+
+/* UPLOAD button */
+.vh-upload {
+  border-color: #ffc107;
+  color: #ffc107;
+}
+
+.vh-upload:hover {
+  background: #ffc107;
+  color: #ffffff;
+}
+.vh-uploading {
+  color: #0dcaf0;
+  font-weight: 600;
+}
+
+.vh-sent {
+  color: orange;
+  font-weight: 600;
+}
+
+.vh-failed {
+  color: red;
+  font-weight: 600;
+}
+
+.vh-loader-content {
+  transform: translateY(-50%);
+}
+
+/* ============================= */
+/*  VIDEO HISTORY MOBILE FIX */
+/* ============================= */
+@media (max-width: 768px) {
+  /* MAIN WRAPPER STACK */
+  .vh-wrapper {
+    flex-direction: column;
+    height: auto;
+    overflow: auto;
+  }
+  /* SIDEBAR FULL WIDTH */
+  .vh-sidebar {
+    width: 392px;
+    min-width: 0;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    padding: 12px;
+  }
+  /* RIGHT SECTION */
+  .vh-right {
+    width: 100%;
+    min-width: 0;
+  }
+  /* FORCE FIX JESSIBUCA VIDEO */
+  #jessibuca video {
+    position: relative !important;   /* override absolute */
+    top: unset !important;
+    left: unset !important;
+
+    width: 100% !important;
+    height: 100% !important;         /*FIX height 0 issue */
+
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  /* ENSURE PARENT HAS HEIGHT */
+  #jessibuca {
+    overflow: hidden;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  #jessibucaWrap {  
+    overflow: hidden;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .vh-video {
+    height: 45vh !important;
+    min-height: 250px !important;
+    position: relative !important;
+    overflow: hidden;
+    margin-right: 18px;
+    
+  }
+
+  /* ================= LOADER FIX ================= */
+  .vh-loader-overlay {
+    position: absolute;
+    inset: 0;               /* covers full video safely */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;            /* above video */
+  }
+
+  .vh-loader-content {
+    transform: translateY(-80%);
+  }
+
+  /* ================= CONTROLS ================= */
+  .vh-controls {
+    flex-wrap: wrap;
+    height: auto;
+    gap: 6px;
+    padding: 6px;
+    position: relative;
+    z-index: 2;             /* above video but below overlay */
+  }
+
+  .vh-controls-left,
+  .vh-controls-center,
+  .vh-controls-right {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .vh-controls-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .vh-controls-right input {
+    width: 70px;
+  }
+
+  /* ================= VIDEO TEXT ================= */
+  .vh-video-text {
+    margin-top: 25%;
+    font-size: 14px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ================= BOTTOM PANEL ================= */
+  .vh-bottom {
+    height: 200px;
+    margin-right: 18px;
+  }
+
+  .vh-bottom-content {
+    flex-direction: column;
+  }
+
+  /* ================= TIMELINE ================= */
+  .vh-timeline-wrapper {
+    height: 140px;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .vh-timeline {
+    min-width: 600px;
+  }
+
+  .vh-hours {
+    gap: 16px;
+    font-size: 12px;
+  }
+
+  /* ================= TABLE ================= */
+  .vh-table {
+    overflow-x: auto;
+  }
+
+  .vh-table table {
+    min-width: 600px;
+  }
+
+  /* ================= INPUT FIX ================= */
+  .vh-sidebar select,
+  .vh-sidebar input {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  /* ================= BUTTONS ================= */
+  .vh-icon-btn {
+    width: 32px;
+    height: 28px;
+  }
+
+  /* OPTIONAL: hide loader when not needed */
+  .vh-loader-overlay.hidden {
+    display: none;
+  }
+}

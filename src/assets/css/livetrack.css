@@ -1,0 +1,181 @@
+/* ================= ROOT ================= */
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================= MAIN CONTAINER ================= */
+.live-container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: visible; /* 🔥 MUST BE visible */
+}
+
+/* ================= MAP CONTAINER ================= */
+.map-container {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+.leaflet-popup.vehicle-popup {
+  min-width: auto !important;
+  max-width: 280px; /* adjust to your preference */
+  padding: 0 !important;
+}
+
+.leaflet-popup-content {
+  margin: 0;
+  padding: 0;
+}
+
+
+.swal2-container {
+  z-index: 10000000 !important;
+}
+.marker-cluster-small {
+  background-color: rgba(0, 123, 255, 0.6);
+}
+.marker-cluster-small div {
+  background-color: rgba(0, 123, 255, 0.9);
+  color: white;
+}
+
+.marker-cluster-medium {
+  background-color: rgba(0, 123, 255, 0.6);
+}
+.marker-cluster-medium div {
+  background-color: rgba(0, 123, 255, 0.9);
+  color: white;
+}
+
+.marker-cluster-large {
+  background-color: rgba(0, 123, 255, 0.6);
+}
+.marker-cluster-large div {
+  background-color: rgba(0, 123, 255, 0.9);
+  color: white;
+}
+.rotating-marker img {
+  transition: transform 0.12s linear;
+  will-change: transform;
+}
+
+.arrow-marker div {
+  transition: transform 0.12s linear;
+  will-change: transform;
+}
+
+/* Pulsing POI */
+.poi-pulse-wrapper {
+  position: relative;
+}
+
+.poi-pulse {
+  width: 40px;
+  height: 40px;
+  background: rgba(37, 99, 235, 0.35);
+  border-radius: 50%;
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  animation: poiPulse 1.6s infinite ease-out;
+}
+
+.poi-pulse-img {
+  width: 28px;
+  height: 28px;
+  position: relative;
+}
+
+/* .leaflet-control-container {
+  display: none !important;
+} */
+
+/* ===== GLOBAL STATUS BADGE ===== */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 14px;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 5px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+/* ACTIVE */
+.status-active {
+  background-color: #2e7d32;
+  color: white;
+  
+}
+
+/* INACTIVE */
+.status-inactive {
+  background-color: #d32f2f;
+  color: white;
+}
+.form-select {
+  width: 100%;
+  padding: 8px 36px 8px 12px;  /* right space arrow ke liye */
+  font-size: 14px;
+  line-height: 1.5;
+  color: #374151;
+  background-color: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23666' height='20' viewBox='0 0 20 20' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M5 7l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 18px;
+}
+.form-control,
+.form-select {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #374151;
+  background-color: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+.map-loader {
+  position: absolute;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.6); /* light overlay */
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

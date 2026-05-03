@@ -1,0 +1,172 @@
+/* Modal body scroll */
+.sensor-modal-body {
+  max-height: calc(100vh - 180px); /* header + footer space */
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* Wrapper layout */
+.sensor-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Panel */
+.sensor-panel {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 14px;
+}
+
+/* Footer always visible */
+.sensor-modal-footer {
+  position: sticky;
+  bottom: 0;
+  background: #fff;
+  padding: 12px 16px;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  z-index: 5;
+}
+
+
+
+/* MAIN LAYOUT */
+.sensor-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 20px;
+  background: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+/* PANELS */
+.sensor-panel {
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  padding: 16px;
+  background: #fff;
+}
+
+/* TITLES */
+.panel-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 6px;
+}
+
+/* FORM ROW */
+.form-row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-row label {
+  font-size: 13px;
+  color: #374151;
+}
+
+/* INPUTS */
+.sensor-panel input,
+.sensor-panel select {
+  height: 40px;              
+  padding: 8px 12px;         
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font-size: 13px;
+  background: #fff;
+  box-sizing: border-box;    
+}
+
+.sensor-panel input:focus,
+.sensor-panel select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* CHECKBOX */
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+/* CALIBRATION */
+.calibration-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 13px;
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+.calibration-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.calibration-row input {
+  width: 70px;
+}
+
+/* ADD BUTTON */
+.add-btn {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: #6b7280;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background: #4b5563;
+}
+/* ===== Disabled field styling ===== */
+.sensor-panel input:disabled,
+.sensor-panel select:disabled {
+  background-color: #f1f5f9;     /* light gray */
+  color: #94a3b8;               /* gray text */
+  border-color: #cbd5e1;
+  cursor: not-allowed;
+}
+
+/* placeholder bhi light ho */
+.sensor-panel input:disabled::placeholder {
+  color: #cbd5e1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .sensor-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+.disabled-panel {
+  opacity: 0.45;
+  pointer-events: none;
+  filter: grayscale(100%);
+}
+
+.sensor-tab .datatable-padding{
+    margin-top: -12px;
+}

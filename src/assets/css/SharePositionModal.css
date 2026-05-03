@@ -1,0 +1,141 @@
+/* ==================== Container ==================== */
+.share-modal-form {
+  display: flex;
+  flex-direction: column;
+  height: 80vh; /* limit modal height */
+  max-height: 80vh;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  font-family: sans-serif;
+  font-size: 14px;
+  overflow: hidden; /* prevent body from overflowing modal */
+}
+
+/* ==================== Scrollable Body ==================== */
+.share-modal-form .form-body {
+  flex: 1 1 auto; /* take remaining space */
+  min-height: 0; /* essential for flex overflow to work */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-right: 4px;
+}
+
+/* ==================== Footer ==================== */
+.share-modal-form .modal-footer-custom {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+  background: #ffffff;
+  flex-shrink: 0;
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+}
+
+/* ==================== Row Layout ==================== */
+.share-modal-form .row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .share-modal-form .row {
+    grid-template-columns: 1fr;
+  }
+  .share-modal-form {
+    padding: 16px;
+  }
+}
+
+/* ==================== Inputs ==================== */
+.share-modal-form input,
+.share-modal-form select,
+.share-modal-form textarea {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  background: #f9fafb;
+  transition: all 0.2s ease;
+  color: #111827;
+}
+
+.share-modal-form input::placeholder,
+.share-modal-form textarea::placeholder {
+  color: #9ca3af;
+}
+
+.share-modal-form input:focus,
+.share-modal-form select:focus,
+.share-modal-form textarea:focus {
+  border-color: #3b82f6;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+  outline: none;
+}
+
+.share-modal-form textarea {
+  resize: none;
+  height: 80px;
+}
+
+.share-modal-form select {
+  cursor: pointer;
+}
+
+/* ==================== Buttons ==================== */
+.share-modal-form .btn-gray {
+  padding: 9px 20px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: #f3f4f6;
+  color: #374151;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.share-modal-form .btn-gray:hover {
+  background: #e5e7eb;
+}
+
+.share-modal-form .btn-blue {
+  padding: 9px 22px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.35);
+  transition: all 0.2s ease;
+}
+
+.share-modal-form .btn-blue:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.45);
+}
+
+/* ==================== Disabled Inputs ==================== */
+.share-modal-form input:disabled,
+.share-modal-form select:disabled,
+.share-modal-form textarea:disabled {
+  background: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+.error-text {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+

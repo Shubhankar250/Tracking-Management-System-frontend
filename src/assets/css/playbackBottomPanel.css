@@ -1,0 +1,157 @@
+.playback-panel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-top: 1px solid #dcdcdc;
+  height: 70px;
+  transition: height 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.playback-panel.expanded {
+  height: 360px;
+}
+
+/* HEADER */
+.playback-header {
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+/* GRAPH TABS */
+.graph-subtabs.left {
+  flex: 1;
+  display: flex;
+  gap: 16px;
+}
+
+.graph-subtabs.hidden {
+  visibility: hidden;
+}
+
+.graph-subtabs button {
+  background: none;
+  border: none;
+  padding: 6px 0;
+  font-size: 14px;
+  cursor: pointer;
+  color: #000;
+}
+
+.graph-subtabs .active {
+  color: #1677ff;
+  border-bottom: 2px solid #1677ff;
+}
+
+/* RIGHT HEADER */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.playback-tabs button {
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  color: #000;
+}
+
+.playback-tabs .active {
+  color: #1677ff;
+  border-bottom: 2px solid #1677ff;
+}
+
+.expand-btn {
+  border: none;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* ▶ MEDIA CONTROLS (IMAGE MATCH) */
+.playback-controls {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 10px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.media-btn {
+  width: 26px;
+  height: 22px;
+  color: #007bff;
+  border: 1px solid #fff;
+  background: #fff;
+  font-size: 12px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+}
+
+.speed-select {
+  height: 22px;
+  border: 1px solid #007bff;
+  background: #fff;
+  font-size: 12px;
+  padding: 0 4px;
+}
+
+/* BODY */
+.playback-body {
+  flex: 1;
+  overflow: hidden;
+}
+
+.graph-container {
+  padding: 10px;
+  height: 100%;
+}
+
+.graph-placeholder {
+  height: 100%;
+  background: #f5f7fa;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+/* DATA LOG */
+.datalog-table-wrapper {
+  height: 100%;
+  overflow: auto;
+}
+
+.datalog-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.datalog-table th,
+.datalog-table td {
+  padding: 6px;
+  border-bottom: 1px solid #eee;
+  font-size: 13px;
+}
+
+.datalog-table thead {
+  background: #fafafa;
+  position: sticky;
+  top: 0;
+}
+.playback-controls{
+  margin-left: 30px;
+}

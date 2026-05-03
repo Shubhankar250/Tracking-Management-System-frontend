@@ -1,0 +1,163 @@
+.how-section {
+  padding: 70px 20px;
+  background: #f6f8fc;
+  text-align: center;
+  font-family: Inter, sans-serif;
+}
+
+/* BADGE */
+.how-badge {
+  display: inline-block;
+  background: #e8f0ff;
+  color: #2563eb;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+
+/* TITLE */
+.how-title {
+  font-size: 28px;
+  margin-bottom: 6px;
+  color: #111827;
+}
+
+.how-sub {
+  color: #6b7280;
+  margin-bottom: 40px;
+}
+
+/* GRID */
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* CARD */
+.how-card {
+  background: white;
+  border-radius: 14px;
+  padding: 24px;
+  text-align: left;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  border-top: 4px solid #2563eb;
+}
+
+.how-card:nth-child(2) {
+  border-top-color: #ef4444;
+}
+
+.how-card h3 {
+  margin: 12px 0;
+  color: #111827;
+}
+
+.how-card p {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.how-card h4 {
+  margin-top: 14px;
+  font-size: 14px;
+}
+
+.how-card ul {
+  padding-left: 18px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.how-card hr {
+  margin: 14px 0;
+  border: none;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* ICON */
+.how-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.how-icon.blue {
+  background: #e8f0ff;
+  color: #2563eb;
+}
+
+.how-icon.red {
+  background: #fde8e8;
+  color: #ef4444;
+}
+
+/* CTA CARD */
+.how-cta {
+  max-width: 1100px;
+  margin: 40px auto 0;
+  background: white;
+  padding: 26px 28px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  border-top: 4px solid #2563eb;
+}
+
+.how-cta p {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* BUTTONS */
+.how-cta-btns {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #2563eb;
+  color: #2563eb;
+  padding: 10px 16px;
+  border-radius: 8px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .how-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .how-cta {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}

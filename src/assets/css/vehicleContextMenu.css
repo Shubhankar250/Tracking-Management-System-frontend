@@ -1,0 +1,94 @@
+.vehicle-context-menu {
+  background: #fff;
+  min-width: 210px;
+  max-height: calc(100vh - 20px);
+  padding: 6px 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  border-radius: 10px;
+  font-size: 13px;
+  color: #333;
+  z-index: 2147483647;
+  font-family: sans-serif;
+
+  overflow-x: visible;
+  overflow-y: auto;
+}
+/* Menu items */
+.vehicle-context-menu .menu-item {
+  padding: 8px 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  margin: 0px 5px;
+  transition: all 0.2s ease;
+}
+.vehicle-context-menu .menu-item:hover {
+  background: #dcdfe1;
+  color: #141414;
+}
+
+/* Submenu container */
+.vehicle-context-menu .has-submenu {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+}
+
+/* Submenu arrow */
+.vehicle-context-menu .submenu-arrow {
+  font-size: 12px;
+  color: #666;
+  transition: transform 0.2s ease;
+}
+.vehicle-context-menu .has-submenu:hover > .submenu-arrow {
+  transform: rotate(90deg);
+  color: #dcdfe1;
+}
+
+/* Submenu */
+.vehicle-context-menu .submenu {
+  display: none;
+  background: #fff;
+  min-width: 190px;
+  max-height: calc(100vh - 20px); /* same as parent menu */
+  padding: 5px 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  border-radius: 10px;
+  position: fixed;
+  z-index: 2147483647;
+  overflow-y: auto;   /* scroll inside submenu */
+  overflow-x: hidden;
+}
+
+/* Show submenu on hover */
+.vehicle-context-menu .submenu {
+  display: none;
+}
+
+.vehicle-context-menu .submenu.show {
+  display: block;
+}
+
+/* Submenu items */
+.vehicle-context-menu .submenu > div {
+  padding: 8px 14px;
+  margin: 2px 6px;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.vehicle-context-menu .submenu > div:hover {
+  background: #dcdfe1;
+}
+
+/* Icons */
+.icon-time::before { content: "\f017"; font-family: "Font Awesome 5 Free"; font-weight: 900; margin-right: 8px; }
+.icon-follow::before { content: "\f06e"; font-family: "Font Awesome 5 Free"; font-weight: 900; margin-right: 8px; }
+.icon-share::before { content: "\f1e0"; font-family: "Font Awesome 5 Free"; font-weight: 900; margin-right: 8px; }
+.icon-send::before { content: "\f1d8"; font-family: "Font Awesome 5 Free"; font-weight: 900; margin-right: 8px; }
+.icon-edit::before { content: "\f044"; font-family: "Font Awesome 5 Free"; font-weight: 900; margin-right: 8px; }
+.icon-video::before {content: "\f03d";font-family: "Font Awesome 5 Free";font-weight: 900;margin-right: 8px;}

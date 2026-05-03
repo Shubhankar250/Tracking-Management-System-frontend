@@ -1,0 +1,219 @@
+.route-header {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.route-toolbar {
+  margin: 12px 0;
+}
+
+.route-toolbar input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.route-side-form {
+  width: 260px;
+  background: #ffffff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.route-hint {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0d6efd;
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+.route-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+.route-field label {
+  font-size: 14px;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+.route-field input,
+.route-field select {
+  height: 42px;
+  padding: 0 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+.route-group-row {
+  display: flex;
+  align-items: center;   
+  gap: 6px;
+  width: 100%;
+}
+
+.route-group-row select {
+  flex: 1;
+  min-width: 0;          
+  width: 100%;
+  display: block;
+}
+
+.route-plus-btndatatable {
+  background-color: #066fd1;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: background 0.2s;
+  margin: 10px;
+}
+
+.route-plus-btndatatable:hover {
+  background-color: #0052a3;
+}
+
+.route-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.route-btn {
+  min-width: 90px;
+  height: 36px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.route-btn-gray {
+  background: #6b7280;
+  color: #fff;
+}
+
+.route-btn-blue {
+  background: #0d6efd;
+  color: #fff;
+}
+
+.route-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.route-table th,
+.route-table td {
+  padding: 10px;
+  padding-left: 0px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.icon.edit {
+  margin-right: 20px !important;
+  margin-left: 35px !important;
+  color: #0d6efd;
+}
+
+.icon.delete {
+  color: #dc3545 !important;
+}
+
+.route-plus-btn {
+  background-color: #066fd1;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;   
+  border-radius: 5px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+  transition: background 0.2s;
+
+  margin: 0;           
+  flex-shrink: 0; 
+}
+
+.route-container .datatable-padding{
+    margin-top: -20px;
+}
+
+/*====== External CSS Code ======*/
+.route-modal-body-flex {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Container */
+.route-group-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+  flex: 1;              
+  overflow-y: auto;
+}
+
+/* Each row */
+.route-group-row-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Input */
+.route-group-input {
+  color: #000;
+  flex: 1;
+}
+
+/* Delete button */
+.route-group-delete-btn {
+  background: #ff4d4f;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7px;
+}
+
+/* FOOTER */
+.route-group-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 16px 24px;
+  border-top: 1px solid #eee;
+  background: #fff;
+}
+

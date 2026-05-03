@@ -1,0 +1,65 @@
+.schedule-table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 900px;
+}
+
+.schedule-table th,
+.schedule-table td {
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 6px;
+}
+
+.schedule-table th {
+  background: #1f62a6;
+  color: white;
+}
+
+.schedule-table td {
+  height: 28px;
+  cursor: pointer;
+}
+
+.schedule-table td.selected {
+  background: #007bff;
+}
+/* ===== Schedule Buttons ===== */
+.schedule-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+.schedule-actions button {
+  background: #2b7cff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(43, 124, 255, 0.25);
+}
+
+/* Hover */
+.schedule-actions button:hover {
+  background: #1f6ae6;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(43, 124, 255, 0.35);
+}
+
+/* Click */
+.schedule-actions button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(43, 124, 255, 0.25);
+}
+
+/* Optional outline style (if you want later) */
+.schedule-actions button.outline {
+  background: #fff;
+  color: #2b7cff;
+  border: 1px solid #2b7cff;
+}

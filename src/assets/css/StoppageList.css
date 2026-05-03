@@ -1,0 +1,66 @@
+.stoppage-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.stoppage-card:hover {
+  background: #f9fafb;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.icon {
+  min-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #16a34a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.details {
+  flex: 1;
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+.row i {
+  color: #6b7280;
+  width: 16px;
+}
+
+.row.wrap {
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.badge {
+  background: #eef2ff;
+  color: #3730a3;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 12px;
+}

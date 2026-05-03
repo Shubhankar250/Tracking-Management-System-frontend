@@ -1,0 +1,51 @@
+.vehicle-info-panel {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  padding: 15px 20px;
+  border-radius: 8px;
+  width: 420px;
+  font-family: Arial, sans-serif;
+  display: block;
+  z-index: 1000;
+}
+
+.vehicle-info-panel .info-header {
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.vehicle-info-panel .info-header i {
+  margin-right: 8px;
+  color: #000;
+}
+
+.vehicle-info-panel .info-body p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.error_msg {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ff0000;
+  border-radius: 8px;
+  background: #ffe6e6;
+  color: #cc0000;
+  z-index: 1000;
+}
+
+.dot {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}

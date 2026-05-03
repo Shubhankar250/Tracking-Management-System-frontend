@@ -1,0 +1,39 @@
+.sendcommand-select {
+  display: inline-block;
+  min-width: 150px;
+  padding: 6px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  vertical-align: middle;
+  margin-right: 10px; /* <-- adds space after select */
+}
+
+.sendcommand-button {
+  display: inline-block;
+  height: 38px;
+  padding: 6px 14px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-right: 10px; /* <-- adds space after button */
+}
+
+.sendcommand-button-primary {
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+}
+
+.sendcommand-button-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.sendcommand-button-danger {
+  background-color: #dc2626;
+  color: #fff;
+  border: none;
+}

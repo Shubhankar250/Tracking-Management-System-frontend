@@ -1,0 +1,129 @@
+/* ================= RIGHT TOOLBAR CSS ================= */
+.right-toolbar {
+  position: absolute;
+  top: 80px;
+  right: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 999;
+}
+
+.toolbar-btn {
+  background: #0b5ed7;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  color:white
+}
+
+.toolbar-btn.hidden {
+  display: none;
+}
+
+.toolbar-btn:hover {
+  background: #0b4397;
+}
+
+.toolbar-btn.active {
+ background: #1e3a8a;  
+  transform: scale(1.05);
+  color: #fff;
+}
+
+/* Reduce modal height */
+.show-point-modal .modal-box {
+  height: 310px;            /* 👈 smaller height */
+  display: flex;
+  flex-direction: column;
+}
+/* Apply Inter font ONLY to Show Point modal */
+.show-point-modal {
+  font-family: "Inter Var", Inter, -apple-system, BlinkMacSystemFont,
+               "San Francisco", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+/* Body content */
+.show-point-body {
+  flex: 1;
+  padding: 16px;
+}
+
+/* Inputs spacing */
+.show-point-body .form-group {
+  margin-bottom: 14px;
+}
+
+.show-point-body label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.show-point-body input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #d0d5dd;
+  border-radius: 6px;
+}
+
+/* Footer fixed at bottom */
+.show-point-footer {
+  padding: 12px 16px;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  background: #fff;
+}
+
+/* Buttons */
+.btn-primary {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: #e5e7eb;
+  color: #111827;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.layer-dropdown {
+  position: absolute;
+  right: 60px;
+  top: 120px;
+  background: #fff;
+  padding: 2px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  z-index: 9999;
+  min-width: 144px;
+}
+
+.layer-option {
+  display: flex;
+  gap: 8px;
+  padding: 6px 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.layer-option:hover {
+  background: #f5f5f5;
+  border-radius: 4px;
+}
+

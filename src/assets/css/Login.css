@@ -1,0 +1,444 @@
+/* ===== PAGE ===== */
+.tp-page {
+  height: 100vh;
+  background: #f6f8fc;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+/* ===== HEADER ===== */
+.tp-header {
+  height: 60px;
+  background: #1f5fbf;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;   /* spacing control yahan hota hai */
+  color: #fff;
+}
+
+/* LEFT */
+.tp-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* RIGHT */
+.tp-header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* LOGO */
+.tp-logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #0B63D1, #22C55E);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+/* TITLE */
+.tp-title {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* STATUS */
+.tp-status-text {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #22c55e;
+}
+
+/* HELP ICON */
+.tp-help {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e5e7eb;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tp-help:hover {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  transform: scale(1.08);
+}
+
+/* ===== MAIN ===== */
+.tp-container {
+  height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 30px;
+}
+
+/* ===== LEFT CARD ===== */
+.tp-left-card {
+  width: 600px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+.tp-left-card h2 {
+  margin-bottom: 8px;
+}
+
+.tp-left-card p {
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.tp-illustration {
+  height: 260px;
+  background: #eef2f8;
+  border-radius: 10px;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.tp-illustration img {
+  max-height: 200px;
+}
+
+.tp-footer {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-top: 15px;
+}
+.tp-left-card,
+.tp-login-card {
+  min-height: 480px;   /* 👈 adjust as you like */
+}
+/* ===== LOGIN CARD ===== */
+.tp-login-card {
+  width: 400px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+.tp-login-card h3 {
+  margin-bottom: 4px;
+}
+
+.tp-login-card .sub {
+  color: #64748b;
+  margin-bottom: 15px;
+}
+
+/* INPUT */
+.tp-login-card input {
+  width: 100%;
+  height: 42px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  padding: 0 10px;
+  margin-bottom: 12px;
+}
+
+.pwd-group {
+  position: relative;
+}
+
+.pwd-group .toggle {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  cursor: pointer;
+  color: #64748b;
+}
+
+/* ROW */
+.login-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.login-row .forgot {
+  color: #1f5fbf;
+  cursor: pointer;
+}
+
+/* BUTTONS */
+.login-btn {
+  width: 100%;
+  height: 42px;
+  border: none;
+  background: #1f5fbf;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.divider {
+  text-align: center;
+  font-size: 12px;
+  color: #94a3b8;
+  margin: 8px 0;
+}
+
+.otp-btn {
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #1f5fbf;
+  background: #f1f6ff;
+  color: #1f5fbf;
+  margin-bottom: 10px;
+}
+
+.support-btn {
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.terms {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 12px;
+  color: #64748b;
+}
+
+.terms span {
+  color: #1f5fbf;
+  cursor: pointer;
+}
+.tp-illus-wrap{
+  border-radius: 16px;
+  border: 1px solid rgba(226,232,240,.9);
+  background: linear-gradient(180deg, rgba(234,242,255,.9), rgba(255,255,255,.9));
+  box-shadow: 0 12px 30px rgba(2,8,23,.06);
+  padding: 16px;
+  overflow: hidden;
+}
+
+.tp-illus{
+  width: 100%;
+  height: auto;
+  display:block;
+}
+
+  .tp-accent {
+  position: relative;
+  overflow: hidden;
+}
+
+.tp-accent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #1D4ED8, #22C55E, #06B6D4);
+}
+/* ===== BUTTON ICON ===== */
+.btn-icon {
+  margin-right: 8px;
+  font-size: 15px;
+}
+
+/* Make buttons flex */
+.login-btn,
+.otp-btn,
+.support-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+/* ===== LOGIN HOVER ===== */
+.login-btn:hover {
+  background: #174ea6;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(31, 95, 191, 0.25);
+}
+
+/* ===== OTP HOVER ===== */
+.otp-btn:hover {
+  background: #e6f0ff;
+  border-color: #174ea6;
+  transform: translateY(-1px);
+}
+
+/* ===== SUPPORT HOVER ===== */
+.support-btn:hover {
+  background: #f0fdf4;
+  border-color: #22c55e;
+  color: #16a34a;
+  transform: translateY(-1px);
+}
+
+/* ===============================
+   LARGE LAPTOP (1400px ↓)
+================================ */
+@media (max-width: 1400px) {
+  .tp-left-card { width: 540px; }
+  .tp-login-card { width: 380px; }
+}
+
+
+/* ===============================
+   SMALL LAPTOP / TABLET (1100px ↓)
+================================ */
+@media (max-width: 1100px) {
+
+  .tp-container {
+    gap: 18px;
+    padding: 20px;
+  }
+
+  .tp-left-card { width: 480px; }
+  .tp-login-card { width: 360px; }
+
+  .tp-illustration { height: 220px; }
+}
+
+
+/* ===============================
+   TABLET STACK (900px ↓)
+================================ */
+@media (max-width: 900px) {
+
+  .tp-container {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .tp-left-card,
+  .tp-login-card {
+    width: 92%;
+    max-width: 520px;
+  }
+
+  .tp-left-card {
+    order: 1;
+  }
+
+  .tp-login-card {
+    order: 2;
+  }
+}
+
+
+/* ===============================
+   MOBILE (600px ↓)
+================================ */
+@media (max-width: 600px) {
+
+  .tp-header {
+    padding: 0 14px;
+  }
+
+  .tp-title {
+    font-size: 14px;
+  }
+
+  .tp-status-text {
+    font-size: 12px;
+  }
+
+  .tp-container {
+    padding: 15px;
+    gap: 14px;
+  }
+
+  .tp-left-card,
+  .tp-login-card {
+    width: 100%;
+    padding: 18px;
+    border-radius: 10px;
+  }
+
+  .tp-left-card h2 {
+    font-size: 18px;
+  }
+
+  .tp-login-card h3 {
+    font-size: 17px;
+  }
+
+  .tp-illustration {
+    height: 180px;
+  }
+
+  .tp-illustration img {
+    max-height: 150px;
+  }
+
+  .login-btn,
+  .otp-btn,
+  .support-btn {
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
+
+/* ===============================
+   SMALL MOBILE (420px ↓)
+================================ */
+@media (max-width: 420px) {
+
+  .tp-header {
+    height: 56px;
+  }
+
+  .tp-logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .tp-title {
+    font-size: 13px;
+  }
+
+  .tp-help {
+    width: 28px;
+    height: 28px;
+  }
+
+  .tp-left-card,
+  .tp-login-card {
+    padding: 15px;
+  }
+
+  .tp-illustration {
+    height: 160px;
+  }
+}

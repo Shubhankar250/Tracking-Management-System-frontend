@@ -1,0 +1,727 @@
+/* ================================
+   INPUT / SELECT FOCUS STYLE
+================================ */
+
+.alert-input,
+.alert-select {
+  border: 1px solid #d5d5d5;
+  border-radius: 6px;
+  padding: 9px 12px;
+  width: 100%;
+  transition: all 0.15s ease;
+}
+
+.alert-input:focus,
+.alert-select:focus {
+  outline: none;
+  border-color: #9ec5fe;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+}
+
+/* remove dropdown arrow */
+
+.alert-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #fff;
+}
+
+/* ================================
+   REQUIRED FIELD ASTERISK
+================================ */
+
+.alert-required {
+  color: #dc3545; /* clean bootstrap red */
+  font-weight: 600;
+  margin-left: 2px;
+}
+
+/* ================================
+   CHECKBOX POLISH
+================================ */
+
+.alert-checkbox {
+  cursor: pointer;
+  accent-color: #1f6fd1;
+}
+
+/* ================================
+   ALERT MODAL SEARCH INPUT
+================================ */
+
+.alert-search-input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+}
+
+.alert-search-input:focus {
+  outline: none;
+  border-color: #9ec5fe;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+}
+
+/* ================================
+   STATUS BADGE
+================================ */
+
+.alert-status-badge {
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: #e9edf3;
+  font-size: 12px;
+}
+
+/* =====================================================
+   ADDITIVE STYLES — SAFE FOR SCHEDULE + MODAL LAYOUT
+   (Scoped → does NOT affect existing tabs)
+===================================================== */
+
+/* ================================
+   MODAL BODY + FOOTER (SAFE ADD)
+================================ */
+
+.alert-modal-body {
+  padding: 13px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.alert-modal-footer {
+  background: #f3f4f6;
+  padding: 14px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+/* ================================
+   GEOFENCE SPACING (SAFE)
+================================ */
+
+.geo-actions {
+  display: flex;
+  justify-content: flex-start; /* ← force left */
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.geofences-list {
+  column-count: 4;
+  column-gap: 40px;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+/* ================= USER ITEM ================= */
+
+.geofence-item {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 12.5px;
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 6px 6px; /* optional for better hover area */
+  border-radius: 6px; /* optional for smooth look */
+}
+
+.geofence-item:hover {
+  background-color: #f9f9f9;
+}
+
+.geofence-text {
+  cursor: pointer;
+}
+
+/* =====================================================
+   SCHEDULE TAB — FULLY SCOPED (NO GLOBAL IMPACT)
+===================================================== */
+
+.schedule-root .schedule-table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 900px;
+  font-size: 13px;
+}
+
+.schedule-root .schedule-table th,
+.schedule-root .schedule-table td {
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 6px;
+}
+
+.schedule-root .schedule-table th {
+  background: #1f62a6;
+  color: white;
+}
+
+.schedule-root .schedule-table td {
+  height: 28px;
+  cursor: pointer;
+}
+
+.schedule-root .schedule-table td.selected {
+  background: #007bff;
+}
+
+/* schedule action buttons */
+
+.schedule-root .schedule-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.schedule-root .schedule-actions button:not(.alert-btn) {
+  background: #2b7cff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.schedule-root .schedule-actions button:not(.alert-btn):hover {
+  background: #1f6ae6;
+}
+
+/* ACTIVE (CLICK) STATE — ONLY FOR SCHEDULE DEFAULT BUTTONS */
+.schedule-root .schedule-actions button:not(.alert-btn):active {
+  background: #174fc4;
+  transform: scale(0.97);
+}
+
+/* =========================================
+   SCHEDULE BUTTON UNIFORM SIZE + RESPONSIVE
+   (STRICTLY SCOPED — NO SIDE EFFECTS)
+========================================= */
+
+.schedule-root .schedule-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+/* 🔹 ALL BUTTONS SAME SIZE */
+.schedule-root .schedule-actions button {
+  flex: 1 1 150px; /* equal width */
+  max-width: 180px; /* prevent over-stretch */
+  min-width: 140px; /* consistent baseline */
+
+  height: 38px; /* uniform height */
+  padding: 0 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 6px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.alert-tab-disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Toolbar */
+.alert-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.alert-toolbar .right {
+  display: flex;
+  gap: 8px;
+}
+
+/* ================= alert BUTTONS (MATCH OBJECT TAB) ================= */
+
+.alert-btn {
+  border-radius: 30px;
+  padding: 8px 18px;
+  min-width: 150px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Primary (Select All) */
+.alert-btn.primary {
+  background: #2563eb;
+  color: #ffffff;
+  border: 1px solid #2563eb;
+}
+
+.alert-btn.primary:hover {
+  background: #1e4ed8;
+}
+
+/* Secondary (Deselect All) */
+.alert-btn.secondary {
+  background: #e5e7eb;
+  color: #111827;
+  border: 1px solid #d1d5db;
+}
+
+.alert-btn.secondary:hover {
+  background: #d1d5db;
+}
+
+/* ================= OBJECT TAB – VEHICLE GRID ================= */
+
+/* Group header inline */
+.group-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.group-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+/* 4 vehicles per row */
+.vehicles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 🔥 4 in one row */
+  gap: 8px 16px;
+  padding-left: 22px;
+  overflow-y: auto;
+}
+
+/* Vehicle checkbox + name inline */
+.vehicle-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 400;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #16a34a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.form-control-search {
+  margin-top: -1%;
+  max-width: 220px;
+  margin-left: 10px;
+  padding-left: 10px;
+}
+
+.form-control-search:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+/* ================================
+   USERS TAB — FINAL COMPACT UI
+================================ */
+
+/* REMOVE CARD LOOK */
+.users-card {
+  padding: 8px 10px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+/* ================= LABEL ================= */
+
+.users-label {
+  margin-bottom: 4px;
+}
+
+.users-label h6 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.2;
+  color: #111827;
+}
+
+/* ================= TOOLBAR ================= */
+
+.users-toolbar {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+/* ================= USERS LIST (FINAL FIX) ================= */
+
+.users-list {
+  column-count: 4; /* 🔥 3 vertical columns */
+  column-gap: 40px; /* space between columns */
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+/* ================= USER ITEM ================= */
+
+.user-item {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 12.5px;
+  white-space: nowrap;
+
+  cursor: pointer;
+}
+
+.user-item:hover {
+  background-color: #f9f9f9;
+}
+
+.user-text {
+  cursor: pointer;
+}
+
+/* ================= CHECKBOX ================= */
+
+/* ================= SCROLLBAR ================= */
+
+.users-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.users-list::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 6px;
+}
+
+.alert-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 6px; /* 👈 gap between label & input */
+  color: #000000;
+}
+
+.true-false-label {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+}
+
+/*ROUTES SETTINGS*/
+
+.routes-list {
+  column-count: 4;
+  column-gap: 40px;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+/* ================= route ITEM ================= */
+
+.route-item {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 12.5px;
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 6px 6px;
+  border-radius: 6px;
+}
+
+.route-item:hover {
+  background-color: #f9f9f9;
+}
+
+.route-text {
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------------------- */
+
+/* =========================================
+   RESPONSIVE TABS (SAFE — NO SIDE EFFECTS)
+========================================= */
+
+.alert-tabs-container {
+  position: relative;
+  z-index: 1000; /* 🔥 ensures it's above modal content */
+}
+
+/* Hide hamburger by default */
+.alert-tabs-toggle {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 6px;
+  z-index: 99999; /* 🔥 VERY IMPORTANT */
+}
+
+/* ================= DESKTOP ================= */
+.alert-tabs-desktop {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  min-height: 45px;
+  background: #ffffff !important;
+  border-bottom: 1px solid rgba(229, 231, 235, 0.7);
+}
+
+.tabs-wrapper {
+  position: relative;
+}
+
+.alert-tabs-toggle {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 6px;
+  z-index: 99999;
+}
+
+/* ❗ HIDE MOBILE DROPDOWN BY DEFAULT (DESKTOP SAFE) */
+.alert-tabs-responsive {
+  display: none !important;
+}
+
+.custom-select-dropdown,
+.ignition-dropdown {
+  position: absolute;
+  left: 0;
+
+  width: auto; /* ✅ NOT 100% */
+  min-width: 200px; /* adjust as needed */
+  max-width: 320px; /* prevents over expansion */
+
+  background: #fff;
+  border-radius: 8px;
+  margin-top: 6px;
+
+  max-height: 300px;
+  overflow-y: auto;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+}
+
+/* Command dropdown wrapper (scoped, no side effects) */
+.command-dropdown-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .command-dropdown-wrapper .custom-select-dropdown {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    border-radius: 0%;
+    left: 0;
+    right: 0;
+  }
+
+  .vehicles-grid {
+    display: flex;
+    gap: 8px 16px;
+    padding-left: 22px;
+    overflow-y: auto;
+    flex-direction: column;
+  }
+
+  .custom-select-box,
+  .ignition-box {
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #fff;
+    cursor: pointer;
+  }
+
+  .ignition-dropdown {
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    margin-top: 6px;
+    max-height: 500px;
+    overflow-y: auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+  }
+
+  .custom-select-dropdown {
+    position: absolute;
+    width: 100%;
+    max-width: 95%;
+    background: #fff;
+    border-radius: 8px;
+    margin-top: 6px;
+    max-height: 500px;
+    overflow-y: auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+  }
+
+  .custom-option {
+    padding: 10px 12px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .custom-option:hover {
+    background: #f3f4f6;
+  }
+
+  .custom-option.active {
+    background: #2563eb;
+    color: #fff;
+  }
+
+  /* 🚫 Prevent horizontal scroll completely */
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  /* 🔹 HEADER (Hamburger Row) */
+  .tabs-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: #fff;
+    min-height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    padding: 6px 10px;
+    border-bottom: 3px solid #eee;
+  }
+
+  /* 🔹 BODY (SCROLLABLE AREA) */
+  .tab-content {
+    height: calc(100vh - 110px); /* 🔥 key line */
+    overflow-y: auto;
+    padding: 10px;
+    scrollbar-width: thin;
+  }
+
+  /* 🔹 FOOTER (FIXED) */
+  .modal-footer-custom {
+    position: sticky;
+    bottom: 0;
+    z-index: 1000;
+    background: #fff;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 6px 10px;
+    border-top: 3px solid #d1d5db;
+  }
+
+  .alert-tabs-desktop {
+    display: none !important;
+  }
+
+  .alert-tabs-toggle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: #2563eb;
+    color: #fff;
+    border-radius: 8px;
+  }
+
+  .alert-tabs-responsive {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 48px;
+    width: max-content;
+    min-width: 100px;
+    max-height: 320px;
+    overflow-y: auto;
+    background: #fff;
+    border-radius: 10px;
+    padding: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    z-index: 99999;
+    flex-direction: column;
+  }
+
+  .alert-tabs-responsive.open {
+    display: flex !important;
+  }
+
+  .schedule-root .schedule-actions {
+    gap: 8px;
+  }
+
+  .schedule-root .schedule-actions button {
+    flex: 1 1 45%; /* 2 buttons per row */
+    max-width: 100%;
+    min-width: unset;
+    height: 40px;
+    font-size: 14px;
+  }
+}

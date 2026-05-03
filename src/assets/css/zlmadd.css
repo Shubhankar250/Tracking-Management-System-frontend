@@ -1,0 +1,149 @@
+/* ==================== Container ==================== */
+.zlm-modal-form {
+  display: flex;
+  flex-direction: column;
+  height: 70vh; /* adjust modal height */
+  max-height: 70vh;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  font-family: sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+/* ==================== Scrollable Body ==================== */
+.zlm-modal-form .form-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-right: 4px;
+}
+
+/* ==================== Footer ==================== */
+.zlm-modal-form .modal-footer-custom {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+  background: #ffffff;
+  flex-shrink: 0;
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+}
+
+/* ==================== Row Layout ==================== */
+.zlm-modal-form .row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .zlm-modal-form .row {
+    grid-template-columns: 1fr;
+  }
+  .zlm-modal-form {
+    padding: 16px;
+  }
+}
+
+/* ==================== Inputs ==================== */
+.zlm-modal-form input,
+.zlm-modal-form select,
+.zlm-modal-form textarea {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  background: #f9fafb;
+  transition: all 0.2s ease;
+  color: #111827;
+}
+
+.zlm-modal-form input::placeholder,
+.zlm-modal-form textarea::placeholder {
+  color: #9ca3af;
+}
+
+.zlm-modal-form input:focus,
+.zlm-modal-form select:focus,
+.zlm-modal-form textarea:focus {
+  border-color: #3b82f6;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+  outline: none;
+}
+
+.zlm-modal-form textarea {
+  resize: none;
+  height: 80px;
+}
+
+/* ==================== Buttons ==================== */
+.zlm-modal-form .btn-gray {
+  padding: 9px 20px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: #f3f4f6;
+  color: #374151;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.zlm-modal-form .btn-gray:hover {
+  background: #e5e7eb;
+}
+
+.zlm-modal-form .btn-blue {
+  padding: 9px 22px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.35);
+  transition: all 0.2s ease;
+}
+
+.zlm-modal-form .btn-blue:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.45);
+}
+
+/* ==================== Disabled Inputs ==================== */
+.zlm-modal-form input:disabled,
+.zlm-modal-form select:disabled,
+.zlm-modal-form textarea:disabled {
+  background: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* ==================== Form Groups ==================== */
+.zlm-modal-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.zlm-modal-form label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: #374151;
+}
+
+.st-required {
+  color: #dc2626;
+  margin-left: 2px;
+}

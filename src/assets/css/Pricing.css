@@ -1,0 +1,166 @@
+/* PAGE */
+.pr-page {
+    background: #eef2f7;
+    min-height: 100vh;
+    padding: 40px 0;
+    font-family: Inter, system-ui, sans-serif;
+}
+
+.pr-container {
+    width: 92%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* HEADER */
+.pr-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.pr-badge {
+    background: #fde8e8;
+    color: #dc2626;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.pr-header h1 {
+    margin: 8px 0;
+}
+
+.pr-muted {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* GRID */
+.pr-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+/* CARD */
+.pr-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+/* GRADIENT BORDER */
+.pr-accent {
+    position: relative;
+    overflow: hidden;
+}
+
+.pr-accent::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background: linear-gradient(90deg, #2563eb, #ef4444);
+}
+
+/* CHIP */
+.pr-chip {
+    display: inline-block;
+    background: #eef2ff;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.pr-chip.red {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.pr-chip.blue {
+    background: #e0f2fe;
+    color: #0284c7;
+}
+
+/* LIST */
+.pr-list {
+    margin: 14px 0;
+    padding-left: 18px;
+}
+
+.pr-list li {
+    margin-bottom: 6px;
+}
+
+/* BUTTONS */
+.pr-btn-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.pr-btn-primary {
+    background: #2563eb;
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.pr-btn-outline {
+    border: 1px solid #2563eb;
+    color: #2563eb;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* FAQ */
+.pr-bottom {
+    margin-top: 26px;
+}
+
+.pr-bottom-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin: 14px 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .pr-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pr-bottom-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.pr-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(226, 232, 240, .95);
+    background: rgba(255, 255, 255, .70);
+    color: var(--tp-muted);
+    font-weight: 800;
+}
+
+.pr-badge .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: red;
+    box-shadow: 0 0 0 4px rgba(239, 68, 68, .14);
+}
+  .pr-highlight{outline:3px solid rgba(11,99,209,.14);}

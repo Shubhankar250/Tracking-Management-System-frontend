@@ -1,0 +1,176 @@
+body,
+.modal,
+.modal * {
+    font-family: sans-serif !important;
+}
+
+
+/* =========================
+   MODAL OVERLAY
+========================= */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(3px);
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+/* =========================
+   MODAL BOX
+========================= */
+.modal-box {
+  background: #ffffff;
+  border-radius: 12px;
+  width: 650px;
+  max-width: 95vw;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Sizes */
+.modal-box.small { width: 400px; }
+.modal-box.medium { width: 650px; }
+.modal-box.large { width: 1000px; }
+.modal-box.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+  border-radius: 0;
+  margin: 0;
+}
+/* =========================
+   MODAL HEADER (FIXED)
+========================= */
+.modal-header {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #066fd1, #0a5ab9);
+  color: #ffffff;
+  padding: 12px 16px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Header Actions */
+.modal-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-add {
+  background: #0a5ab9;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+
+
+.btn-close {
+  background: #ef4444;
+  border: none;
+  color: #fff;
+  padding: 5px 9px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.btn-close:hover {
+  background: #dc2626;
+}
+
+/* =========================
+   MODAL BODY (NO SCROLL)
+========================= */
+.modal-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;          /* 🔥 KEY FIX */
+  background: #f8fafc;
+}
+.modal-container {
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;  
+}
+
+
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+  .modal-box.small,
+  .modal-box.medium,
+  .modal-box.large {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+}
+
+.modal-body {
+  position: relative;        /* 👈 REQUIRED */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  background: #f8fafc;
+}
+
+.body-add-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  z-index: 5;
+
+  /* 🔥 SIZE INCREASE */
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+
+  border-radius: 8px;
+}
+
+.body-add-btn {
+    position: absolute;
+    background-color: #066fd1;
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+  
+    font-size: 14px;
+    transition: background 0.2s;
+      margin-right: 10px;
+}
+
+.body-add-btn:hover {
+    background-color: #0052a3;
+}

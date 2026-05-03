@@ -1,0 +1,166 @@
+.vg-container {
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background: #f5f5f5;
+  box-sizing: border-box;
+}
+
+/* Top panel */
+.vg-panel {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 30px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  flex-shrink: 0;
+}
+
+/* Filters */
+.vg-filter {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Content area */
+.vg-content {
+  flex: 1;
+  padding: 20px 30px;
+  overflow-y: auto;
+  background-color: white;
+}
+.vg-content img{
+  width: 200px;
+
+}
+/* Button */
+.vg-save-btn {
+  margin-top: 22px;
+  padding: 10px 25px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 280px;
+}
+
+.vg-save-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Labels */
+.vg-filter label {
+  font-size: 13px;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+/* Inputs */
+.vg-filter input,
+.vg-filter select {
+  height: 38px;
+  padding: 0 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  min-width: 280px;
+  outline: none;
+}
+
+.vg-filter input:focus,
+.vg-filter select:focus {
+  border-color: #3b82f6;
+}
+/* 📱 Mobile Responsive (only affects small screens) */
+@media (max-width: 768px) {
+
+  .vg-container {
+    width: 100%;
+  }
+
+  /* Stack panel items vertically */
+  .vg-panel {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 12px 15px;
+    gap: 10px;
+  }
+
+  /* Full width filters */
+  .vg-filter {
+    width: 100%;
+  }
+
+  .vg-filter input,
+  .vg-filter select {
+    width: 100%;
+    min-width: unset;
+  }
+
+  /* Button full width */
+  .vg-save-btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /* Reduce padding in content */
+  .vg-content {
+    padding: 15px;
+  }
+}
+.react-photo-album img {
+  cursor: pointer;
+}
+.react-photo-album--photo {
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.react-photo-album img {
+  display: block;
+}
+.preview-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.preview-img {
+  flex: 1;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.preview-footer {
+  text-align: center;
+  padding: 10px;
+  background: #3b82f6;
+  color: #fff;
+  font-size: 14px;
+}
+.react-photo-album--photo {
+    padding: 1px !important;}
+    @media (max-width: 768px) {
+
+  .react-photo-album--row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+  }
+
+  .react-photo-album--photo {
+    width: 48% !important;  
+    max-width: 48% !important;
+  }
+
+  .react-photo-album img {
+    width: 100% !important;
+    height: auto !important;
+  }
+}

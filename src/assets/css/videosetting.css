@@ -1,0 +1,198 @@
+
+.setting-form {
+  padding: 10px;
+}
+
+.setting-form .form-group {
+  margin-bottom: 12px;
+}
+
+.setting-form label {
+  display: block;
+  font-size: 15px;
+  color: #000;
+  margin-bottom: 4px;
+}
+
+.setting-form input,
+.setting-form select {
+  width: 100%;
+  height: 35px;
+  padding: 6px 8px;
+  font-size: 13px;
+  box-sizing: border-box;
+  border-radius: 6px;
+
+  border: 1px solid #cbd5e1;   /* 👈 SAME BORDER */
+  outline: none;
+}
+
+.setting-form input:focus,
+.setting-form select:focus {
+  border-color: #3b82f6;       /* blue focus */
+}
+
+
+/* Checkbox alignment */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox-group input {
+  width: auto;
+  height: auto;
+}
+
+/* Timezone row */
+.timezone-row {
+  display: flex;
+  gap: 8px;
+}
+
+.timezone-row select:first-child {
+  flex: 1;
+}
+
+.timezone-row select:last-child {
+  width: 90px;
+}
+
+/* Button spacing */
+.text-end {
+  text-align: right;
+}
+
+.mt-3 {
+  margin-top: 16px;
+}
+/* Switch container */
+/* Switch container */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;      /* ⬅ smaller */
+  height: 18px;     /* ⬅ smaller */
+  margin-top: 6px;
+}
+
+/* Hide default checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #cbd5e1;
+  transition: 0.25s;
+  border-radius: 18px;
+}
+
+/* Knob */
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 14px;     /* ⬅ smaller knob */
+  width: 14px;
+  left: 2px;
+  top: 2px;
+  background-color: white;
+  transition: 0.25s;
+  border-radius: 50%;
+}
+
+/* Checked state */
+.switch input:checked + .slider {
+  background-color: #3b82f6;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(18px); /* ⬅ adjusted */
+}
+.modal-footer-custom {
+  display: flex;
+  justify-content: flex-end; /* 👉 right side */
+  margin-top: 16px;
+  padding-top: 10px;
+  border-top: 1px solid #e5e7eb; /* light divider (optional) */
+}
+.edit-btn {
+  float: right;
+  background-color: #3b82f6;
+  color: #fff;
+
+  border: none;              /* ❌ remove black border */
+  outline: none;             /* ❌ remove focus outline */
+  box-shadow: none;
+
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  background-color: #2563eb;
+}
+
+.edit-btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+.save-btn {
+  background-color: #3b82f6;
+  color: #fff;
+  margin-top: 10px;
+  border: none;              /* ❌ remove black border */
+  outline: none;
+  box-shadow: none;
+
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background-color: #2563eb;
+}
+
+.save-btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+.modal-footer-custom {
+  display: flex;
+  justify-content: flex-end;   /* 👉 right side */
+  align-items: center;        /* 👉 vertically center */
+
+  height: 48px;               /* 👈 footer height kam */
+  padding: 0 12px;            /* 👈 equal top-bottom space */
+  
+  border-top: 1px solid #e5e7eb;
+}
+.settings-header {
+  display: flex;
+  justify-content: space-between; /* left ↔ right */
+  align-items: center;
+ padding: 20px;
+}
+
+.settings-header h2 {
+  margin: 0;
+}
+
+.settings-header p {
+  font-size: 14px;
+  color: #6b7280;
+}
+.modal-body {
+  background: #f8fafc;
+}

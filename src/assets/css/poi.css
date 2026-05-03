@@ -1,0 +1,328 @@
+/* ICON DROPDOWN */
+.icon-only-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.icon-selected {
+  width: 100%;
+  height: 42px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: #fff;
+  position: relative;
+}
+
+.icon-selected img {
+  width: 26px;
+  height: 26px;
+}
+
+.icon-selected .arrow {
+  position: absolute;
+  right: 10px;
+}
+
+/* DROPDOWN LIST */
+.icon-list {
+  position: absolute;
+  z-index: 30;
+  background: #c6f0f7;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 4px;
+  width: 100%;
+  max-height: 220px;
+  overflow-y: auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(36px, 1fr));
+  gap: 8px;
+  padding: 8px;
+}
+
+/* ICON ITEM */
+.icon-item {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid transparent;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.icon-item img {
+  width: 26px;
+  height: 26px;
+}
+
+/* HOVER GREEN BORDER */
+.icon-item:hover {
+  border-color: #4b2ecc;
+  background: #eafff1;
+}
+
+/* SELECTED ICON */
+.icon-item.active {
+  border-color: #2e31cc;
+  background: #dff7ea;
+}
+/* POI PAGE STYLE — Geofence jaisa but separate */
+
+.poi-container {
+  width: 100%;
+}
+
+.poi-header {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.poi-plus-btndatatabel {
+  background-color: #066fd1;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: background 0.2s;
+  margin: 10px;
+}
+
+.poi-plus-btndatatabel:hover {
+  background-color: #0052a3;
+}
+
+.poi-toolbar {
+  margin: 12px 0;
+}
+
+.poi-toolbar input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.poi-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.poi-table td,
+.poi-table th {
+  padding: 10px 14px;
+  vertical-align: middle;
+}
+
+.poi-table tbody tr {
+  border-bottom: 1px solid #eee;
+}
+
+.poi-actions-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.poi-icon.edit {
+  color: #2563eb;
+}
+
+.poi-icon.edit:hover {
+  background: #dbeafe;
+}
+
+.poi-icon.delete {
+  color: #dc2626;
+}
+
+.poi-icon.delete:hover {
+  background: #fee2e2;
+}
+
+/* ================= POI FORM ================= */
+
+.poi-side-form {
+  width: 260px;
+  padding: 20px;
+  background: #ffffff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.poi-hint {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0d6efd;
+  margin-bottom: 18px;
+}
+
+/* FIELD */
+
+.poi-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+.poi-field label {
+  font-size: 14px;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+.poi-field input,
+.poi-field select {
+  height: 42px;
+  padding: 0 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+/* GROUP ROW */
+
+.poi-group-row {
+  display: flex;
+  align-items: center;   /* ✅ vertical alignment fix */
+  gap: 6px;
+  width: 100%;
+}
+
+.poi-plus-btn {
+  background-color: #066fd1;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;   /* ✅ keep original size */
+  border-radius: 5px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+  transition: background 0.2s;
+
+  margin: 0;           /* ❗ remove breaking margin */
+  flex-shrink: 0;      /* ❗ prevent shrink */
+}
+
+/* ACTION BUTTONS */
+
+.poi-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.poi-btn {
+  min-width: 90px;
+  height: 36px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.poi-btn-gray {
+  background: #6b7280;
+  color: #fff;
+}
+
+.poi-btn-blue {
+  background: #0d6efd;
+  color: #fff;
+}
+.poi-group-row select {
+  flex: 1;
+  min-width: 0;          /* ✅ critical for flexbox */
+  width: 100%;
+  display: block;
+}
+
+.poi-plus-btn {
+  flex-shrink: 0; /* 👈 button size fixed */
+}
+
+.poi-container .datatable-padding{
+    margin-top: -20px;
+}
+.poi-field input:focus,
+.poi-field select:focus {
+  outline: none;
+  border-color: #2563eb;
+  
+}
+
+/* ================= POI GROUP MODAL ================= */
+
+.poi-modal-body-flex {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* container */
+.poi-group-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+  flex: 1;              
+  overflow-y: auto;
+}
+
+/* each row */
+.poi-group-row-modal {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* input */
+.poi-group-input {
+  color: #000;
+}
+
+/* delete button */
+.poi-group-delete-btn {
+  background: #ff4d4f;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7px;
+}
+
+/* FOOTER */
+.poi-group-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 16px 24px;
+  border-top: 1px solid #eee;
+  background: #fff;
+}

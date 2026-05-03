@@ -1,0 +1,167 @@
+/* ================= TABLE BASE ================= */
+.tp-table {
+  width: 100%;
+  max-width: 100%;
+  table-layout: fixed;              /* prevent overflow cut */
+  border-collapse: separate;        /* required for sticky header */
+  border-spacing: 0;
+  background: #ffffff;
+  font-family: sans-serif;
+  font-size: 13px;
+  border-radius: 6px;
+  font-weight: 400;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ================= HEADER ================= */
+.tp-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #f3f6fb;
+  box-shadow: inset 0 -2px 0 #dbe1ea; /* clear separation */
+}
+
+.tp-table th {
+  padding: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  vertical-align: middle;
+}
+/* ================= BODY ================= */
+.tp-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+    text-align: center;
+}
+
+
+/* ================= ROW EFFECTS ================= */
+.tp-table tbody tr:hover {
+  background: #f1f6ff;
+}
+
+.tp-table tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+/* ================= MODAL FIX ================= */
+.modal-body {
+  overflow-x: auto;                 /* horizontal scroll if needed */
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .tp-table {
+    font-size: 12px;
+  }
+}
+
+/* ================= DATATABLE HEADER ================= */
+.datatable-header {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 0;
+}
+
+.datatable-search {
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 200px;
+  margin-right: 10px;
+}
+
+/* ================= DATATABLE FOOTER ================= */
+.datatable-footer {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;  /* 👈 3 sections */
+  align-items: center;
+  margin-top: 15px;
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page-item {
+  display: flex;
+}
+
+.page-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 38px;
+  height: 36px;
+  border: 1px solid #dee2e6;
+  background: #fff;
+  padding: 0 12px;
+  cursor: pointer;
+  color: #0d6efd;
+}
+
+.page-item:not(:last-child) .page-link {
+  border-right: none;
+}
+
+.page-item:first-child .page-link {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.page-item:last-child .page-link {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.page-item.active .page-link {
+  background-color: #17a2b8;
+  color: white;
+  border-color: #17a2b8;
+}
+
+.page-item.disabled .page-link {
+  cursor: not-allowed;
+  color: #6c757d;
+  background: #f8f9fa;
+}
+
+.datatable-padding
+{
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.datatable-info {
+  font-size: 14px;
+  color: #6b7280;
+}
+/* ================= INPUT & SELECT FOCUS ================= */
+.datatable-search:focus,
+.datatable-length:focus {
+  outline: none;                       /* remove default outline */
+  border-color: #2563eb;               /* blue border */
+}
+
+
+
+/* Perfect centering for icons / custom render content */
+.tp-table td > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px; /* keeps your icon spacing */
+}
+

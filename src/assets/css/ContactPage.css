@@ -1,0 +1,165 @@
+/* PAGE */
+.cp-page {
+  background: #eef2f7;
+  min-height: 100vh;
+  padding: 40px 0;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.cp-container {
+  width: 92%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* HEADER */
+.cp-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.cp-header h1 {
+  margin: 8px 0;
+  font-size: 28px;
+  color: #1f2937;
+}
+
+.cp-header p {
+  color: #6b7280;
+}
+
+.cp-badge {
+  background: #fde8e8;
+  color: #dc2626;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* GRID */
+.cp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 20px;
+}
+
+/* CARD */
+.cp-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  border-top: 4px solid transparent;
+   min-height: 520px;
+}
+/* ===== GRADIENT TOP BORDER (same as home .tp-accent) ===== */
+.cp-accent {
+  position: relative;
+  overflow: hidden;
+  border-top: none;           /* remove old border */
+}
+
+/* GRADIENT BAR */
+.cp-accent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #2563eb, #ef4444);
+  border-top-left-radius: 14px;     /* match card radius */
+  border-top-right-radius: 14px;
+  z-index: 1;
+}
+
+.cp-card h3 {
+  margin-bottom: 14px;
+  color: #111827;
+}
+
+/* INFO */
+.cp-info {
+  margin-bottom: 14px;
+}
+
+.cp-info label {
+  display: block;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.cp-info a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.cp-note {
+  background: #eef5ff;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 13px;
+  color: #374151;
+  margin: 14px 0;
+}
+
+/* FORM */
+.cp-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 16px;
+}
+
+.cp-input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cp-textarea {
+  margin-top: 14px;
+  min-height: 80px;
+  resize: none;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* BUTTONS */
+.cp-btn-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+  justify-content: center;
+}
+
+.cp-btn-primary {
+  background: #2563eb;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cp-btn-outline {
+  background: transparent;
+  border: 1px solid #2563eb;
+  color: #2563eb;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .cp-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,421 @@
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.follow-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.follow-header-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.follow-label,
+.follow-vehicle-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* =========================================
+   SPLIT CONTAINER
+========================================= */
+
+.follow-split-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* MAP SECTION */
+.follow-map-section {
+  width: 50%;
+  min-width: 0;
+  min-height: 0;
+  position: relative;
+}
+
+.follow-video-section {
+  width: 50%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: #0f172a;
+  border-left: 1px solid #1e293b;
+  overflow: hidden;
+}
+
+/* =========================================
+   VIDEO TOP (PLAYER)
+========================================= */
+
+.follow-video-section .video-top {
+  flex: 0 0 60%;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* =========================================
+   VIDEO BOTTOM (TABS)
+========================================= */
+
+.follow-video-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #111827;
+  overflow: hidden;
+}
+.video-bottom-tabs {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #111827;
+  overflow: hidden;
+  min-height: 0;   /* ✅ REQUIRED */
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+/* =========================================
+   TABLET (<= 992px)
+========================================= */
+
+@media (max-width: 992px) {
+  .follow-split-container {
+    flex-direction: column;
+  }
+
+  .follow-map-section {
+    height: 55%;
+  }
+
+  .follow-video-section {
+    width: 100%;
+    height: 45%;
+    max-width: 100%;
+    border-left: none;
+    border-top: 1px solid #1e293b;
+  }
+}
+
+/* =========================================
+   MOBILE (<= 600px)
+========================================= */
+
+@media (max-width: 600px) {
+  .follow-map-section {
+    height: 60%;
+  }
+
+  .follow-video-section {
+    height: 40%;
+  }
+
+  .follow-header {
+    gap: 4px;
+  }
+
+  .follow-label,
+  .follow-vehicle-name {
+    font-size: 13px;
+  }
+}
+
+/* =========================================
+   VERY SMALL SCREENS
+========================================= */
+
+@media (max-width: 400px) {
+  .follow-video-section {
+    height: 38%;
+  }
+
+  .follow-map-section {
+    height: 62%;
+  }
+}
+
+/* ===============================
+   FOLLOW TAB CONTAINER
+================================= */
+#follow-tab-content {
+  padding: 8px 10px;
+  font-size: 13px;
+  overflow-y: auto;
+  flex: 1;              /* ✅ FIX */
+  min-height: 0;        /* ✅ VERY IMPORTANT (fixes flex overflow space) */
+}
+
+/* ===============================
+   PREMIUM INFO CARD STYLE
+================================= */
+#follow-driver-table,
+#follow-vehicle-table,
+#follow-object-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 3px;
+  background: transparent;
+  margin-bottom: 6px;
+  font-family: sans-serif;
+}
+
+/* Row Card Style */
+#follow-driver-table tr,
+#follow-vehicle-table tr,
+#follow-object-table tr {
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+#follow-driver-table tr:hover,
+#follow-vehicle-table tr:hover,
+#follow-object-table tr:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Table Cells */
+#follow-driver-table td,
+#follow-vehicle-table td,
+#follow-object-table td{
+  padding: 5px 8px;
+  vertical-align: middle;
+  font-size: .85rem;
+}
+
+/* Label Column */
+#follow-driver-table td:first-child,
+#follow-vehicle-table td:first-child,
+#follow-object-table td:first-child {
+  font-weight: 600;
+  color: #000000;
+  width: 180px;
+}
+
+/* Value Column */
+#follow-driver-table td:last-child,
+#follow-vehicle-table td:last-child,
+#follow-object-table td:last-child {
+  font-weight: 500;
+  color: #0f172a;
+}
+
+/* ===============================
+   SERVICES TABLE HEADER PREMIUM
+================================= */
+/* ===== FOLLOW MODERN SERVICE UI ===== */
+
+.follow-service-modern {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Header */
+.follow-service-header {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #111827;
+
+  padding: 6px 8px;
+  background: #f3f4f6;
+  border-radius: 6px;
+}
+
+/* Rows */
+.follow-service-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 6px 8px;
+  border-radius: 6px;
+
+  background: #ffffff;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+
+  transition: all 0.2s ease;
+}
+
+.follow-service-row:hover {
+  transform: translateY(-1px);
+  background: #f9fafb;
+}
+
+/* Left */
+.follow-service-name {
+  font-weight: 600;
+  font-size: 0.82rem;
+  color: #0f172a;
+}
+
+/* Right */
+.follow-service-date {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+/* ===============================
+   EVENTS SECTION PREMIUM
+================================= */
+#follow-events {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+#follow-events .event-item {
+  padding: 10px 8px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#follow-events .event-item:last-child {
+  border-bottom: none;
+}
+
+#follow-events .event-item span:first-child {
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* ===============================
+   ICON STYLING PREMIUM
+================================= */
+.info-icon {
+  margin-right: 8px;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+/* Colored Icons
+.info-icon.driver { color: #3b82f6; }
+.info-icon.rfid { color: #10b981; }
+.info-icon.phone { color: #f59e0b; }
+.info-icon.email { color: #ef4444; }
+.info-icon.speed { color: #22c55e; }
+.info-icon.address { color: #a855f7; }
+.info-icon.imei { color: #06b6d4; }
+.info-icon.sim { color: #eab308; }
+
+.info-icon.ignition.on { color: #22c55e; }
+.info-icon.ignition.off { color: #ef4444; } */
+
+/* ===============================
+   NO DATA STYLE
+================================= */
+.no-events,
+.no-data {
+  text-align: center;
+  padding: 20px;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+@media (max-width: 768px) {
+  #follow-tab-content {
+    font-size: 13px;
+  }
+
+  #follow-driver-table td,
+  #follow-vehicle-table td,
+  #follow-object-table td {
+    padding: 8px;
+    font-size: 12px;
+  }
+}
+.follow-video-section,
+.video-top,
+.video-bottom-tabs {
+  min-height: 0;
+}
+/* ===============================
+   TODAY ACTIVITY TABLE
+================================= */
+
+#follow-Today_Activity-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 6px;
+  background: transparent;
+  margin-bottom: 6px;
+  font-family: sans-serif;
+}
+
+#follow-Today_Activity-table tr {
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+#follow-Today_Activity-table tr:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+#follow-Today_Activity-table td {
+  padding: 10px 12px;
+  vertical-align: middle;
+  font-size: 0.85rem;
+}
+
+#follow-Today_Activity-table td:first-child {
+  width: 180px;
+  font-weight: 600;
+  color: #111827;
+  white-space: nowrap;
+}
+
+#follow-Today_Activity-table td:last-child {
+  font-weight: 500;
+  color: #0f172a;
+}
+
+#follow-Today_Activity-table span {
+  display: inline-flex;
+  align-items: center;
+  color: #334155;
+}
+.today-activity-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+
+.refresh-btn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.refresh-btn:hover {
+  background: #0056b3;
+}

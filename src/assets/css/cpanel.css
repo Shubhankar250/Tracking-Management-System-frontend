@@ -1,0 +1,43 @@
+
+.generate-token-icon {
+  cursor: pointer;
+  color: #3226dc;
+  font-size: 22px;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.token-cell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.token-text {
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.token-null {
+  color: #999;
+  font-style: italic;
+}
+
+/* Copy button styling */
+.copy-token {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #4a90ff;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.copy-token:hover {
+  transform: scale(1.2);
+  color: #1a73e8;
+}
+
+.cpanel-page .datatable-padding{
+    margin-top: -12px;
+}
+

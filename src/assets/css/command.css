@@ -1,0 +1,293 @@
+.cmd-modal-body-flex {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 160px); 
+}
+
+.cmd-modal-content-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.cmd-modal-footer-custom {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 12px 16px;
+  border-top: 1px solid #e5e7eb;
+  background: #fff;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+}
+
+
+/* CONTAINER */
+.cmd-add-modal-container {
+  background: #ffffff;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  font-family: sans-serif;
+}
+
+/* BODY */
+.cmd-add-modal-body {
+  padding: 16px;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* FORM GROUP */
+.cmd-form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.cmd-form-group label {
+ font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+/* INPUTS */
+.cmd-form-group input,
+.cmd-form-group select,
+.cmd-form-group textarea {
+ width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fff;
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.cmd-form-group textarea {
+  height: 90px;
+  padding: 10px 12px;
+  resize: vertical;
+}
+
+.cmd-form-group input::placeholder {
+  color: #9ca3af;
+}
+
+.cmd-form-group input:focus,
+.cmd-form-group select:focus,
+.cmd-form-group textarea:focus {
+   border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+/* FOOTER */
+.cmd-add-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 16px 24px;
+  border-top: 1px solid #eee;
+  background: #fff;
+}
+
+/* BUTTONS */
+.cmd-btn-secondary {
+ background: #e5e7eb;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.cmd-btn-secondary:hover {
+  background: #d1d5db;
+}
+
+.cmd-btn-primary {
+     background-color: #066fd1;
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.cmd-btn-fixed {
+  width: 90px;
+}
+
+.cmd-btn-primary:hover {
+  background: #0052a3;
+}
+
+/* UPLOAD MODAL BODY */
+.upload-modal-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* DROPZONE */
+.upload-dropzone {
+  border: 2px dashed #cbd5e1;
+  border-radius: 10px;
+  padding: 28px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #f9fafb;
+}
+
+.upload-dropzone:hover {
+  border-color: #2563eb;
+  background: #f1f5ff;
+}
+
+/* ICON */
+.upload-icon {
+  font-size: 42px;
+  margin-bottom: 10px;
+  color: #2563eb;
+}
+
+/* TEXT */
+.upload-text {
+  font-size: 15px;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.upload-success {
+  font-size: 12px;
+  color: #28a745;
+  margin-top: 4px;
+}
+
+.upload-text strong {
+  color: #2563eb;
+}
+
+/* HINT */
+.upload-hint {
+  font-size: 12px;
+  color: #6b7280;
+}
+/* ================= React Select Balanced ================= */
+
+.cmd-select__control {
+  min-height: 40px !important;
+  height: 40px !important;
+  border-radius: 6px !important;
+  border: 1px solid #e5e7eb !important;
+  font-size: 14px;
+  box-shadow: none !important;
+}
+
+/* Focus state */
+.cmd-select__control--is-focused {
+  border-color: #2563eb !important;
+  background: #ffffff !important;
+  box-shadow: none !important;
+}
+
+/* Value container */
+.cmd-select__value-container {
+  padding: 0 10px !important;
+  height: 38px;
+  display: flex;
+  align-items: center;
+}
+
+/* Input field */
+.cmd-select__input-container {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Remove inner input border */
+.cmd-select__input-container input {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Dropdown menu container */
+.cmd-select__menu {
+  z-index: 9999;
+  font-size: 13px;   /* 🔥 reduce font */
+}
+
+/* Each option */
+.cmd-select__option {
+  font-size: 13px;
+  padding: 8px 10px;  /* thoda compact spacing */
+}
+
+/* Hover / focused option */
+.cmd-select__option--is-focused {
+  background-color: #f3f4f6 !important;
+}
+
+/* Selected option */
+.cmd-select__option--is-selected {
+  background-color: #2563eb !important;
+  color: #fff !important;
+}
+
+/* ==================== Buttons ==================== */
+.btn-gray {
+  padding: 9px 20px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: #f3f4f6;
+  color: #374151;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.btn-gray:hover {
+  background: #e5e7eb;
+}
+
+.btn-blue {
+  padding: 9px 22px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.35);
+  transition: all 0.2s ease;
+}
+
+.btn-blue:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.45);
+}
+
+.upl-add-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}

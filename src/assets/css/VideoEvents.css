@@ -1,0 +1,149 @@
+.video-events {
+  background: #fff;
+  padding: 16px;
+  font-family: system-ui, sans-serif;
+}
+
+/* ===== Tabs ===== */
+.tabs {
+  display: flex;
+  gap: 32px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 10px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.tabs span {
+  color: #6b7280;
+  cursor: pointer;
+}
+
+.tabs .active {
+  color: #2563eb;
+  font-weight: 600;
+  position: relative;
+}
+
+.tabs .active::after {
+  content: "";
+  position: absolute;
+  bottom: -11px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #2563eb;
+}
+
+/* ===== Filters ===== */
+.filters {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.filter-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.filter-item label {
+  font-size: 14px;
+  color: #374151;
+}
+
+.filter-item input,
+.filter-item select {
+  height: 38px;
+  padding: 0 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  min-width: 280px;
+  outline: none; 
+}
+.filter-item input:focus,
+.filter-item select:focus {
+  border-color: #3b82f6;       /* blue focus */
+}
+.search-btn {
+  height: 38px;
+  padding: 0 40px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 280px;
+}
+
+/* ===== Table ===== */
+/* .events-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+} */
+
+.events-table tbody td {
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+
+
+
+
+/* Remove side time list */
+.react-datepicker__close-icon {
+  display: none;
+}
+
+
+/* Calendar layout */
+.range-calendar {
+  margin-left: 250px;
+}
+
+/* Bottom time input */
+.react-datepicker__time-input-container {
+  margin: 10px 16px;
+}
+
+.react-datepicker__time-input input {
+  width: 100%;
+  padding: 6px;
+  font-size: 14px;
+}
+
+/* Footer buttons */
+.range-footer {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+.range-footer button {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.range-footer .cancel {
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
+}
+
+.range-footer .apply {
+  background: #2563eb;
+  border: none;
+  color: white;
+}
+.react-datepicker-popper {
+  z-index: 9999 !important;
+}

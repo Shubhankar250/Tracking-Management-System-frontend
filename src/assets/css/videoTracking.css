@@ -1,0 +1,92 @@
+/* videoTracking.css */
+
+.video-page {
+  height: 100%;
+  background: #f6f7fb;
+  overflow: hidden;
+}
+
+.video-tabs {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #e5e5e5;
+  background: #fff;
+}
+
+.video-tab {
+  flex: 1; /* 🔥 equal width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  padding: 12px 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+
+  transition: all 0.2s ease;
+}
+
+.video-tab i {
+  font-size: 14px;
+}
+
+/* Active tab */
+.video-tab.active {
+  color: #2563eb;
+  border-bottom: 2px solid #2563eb;
+  background: #f9fbff;
+}
+
+/* Live icon color */
+.video-tab.active .bi-broadcast {
+  color: #2563eb;
+}
+
+/* Hover */
+.video-tab:hover {
+  background: #007bff5b;
+  color:#2563eb ;
+}
+.vi-title-logo {
+  height: 28px;
+  object-fit: contain;
+}
+/* 📱 MOBILE TABS FIX */
+/* 📱 MOBILE TABS FIX */
+@media (max-width: 768px) {
+
+  .video-tabs {
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    padding: 0 6px;
+  }
+
+  .video-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .video-tab {
+    flex: 0 0 auto;              /* 🔥 equal width hata diya */
+    padding: 8px 12px;
+    font-size: 12px;
+    flex-direction: column;      /* 🔥 icon upar, text niche */
+    gap: 2px;
+    min-width: 70px;             /* 🔥 proper spacing */
+  }
+
+  .video-tab i {
+    font-size: 16px;
+  }
+
+  .video-tab span {
+    display: block;              /* ✅ TEXT WAPAS */
+    font-size: 11px;
+  }
+}

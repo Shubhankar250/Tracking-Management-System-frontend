@@ -1,0 +1,295 @@
+.geo-header {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+
+.geo-toolbar {
+  margin: 12px 0;
+}
+
+.geo-toolbar input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding-left: 0px; 
+}
+
+.geo-inline-form {
+  margin-top: 16px;
+  padding: 16px;
+  max-width: 520px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+}
+
+.geo-form {
+  display: grid;
+  gap: 10px;
+}
+
+.geo-group-row {
+  display: flex;
+  align-items: center;   
+  gap: 6px;
+  width: 100%;
+}
+
+.geo-group-row select {
+  flex: 1;
+  min-width: 0;          
+  width: 100%;
+  display: block;
+}
+
+.geo-add-btn {
+  width: 36px;
+  border: none;
+  background: #0d6efd !important;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+.geo-modal-actions {
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.geo-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+
+.icon {
+  cursor: pointer;
+}
+
+/* Compact the action icons */
+.geo-actions-cell {
+  display: flex;
+  align-items: center;      /* 👈 vertical center */
+  justify-content: center;
+  gap: 8px;
+  height: 100%;             /* 👈 row height follow */
+}
+.geo-side-form {
+  width: 260px;
+  background: #ffffff;
+ 
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.geo-hint {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0d6efd;
+  margin-bottom: 18px;
+}
+
+.geo-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+.geo-field label {
+  font-size: 14px;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+.geo-field input,
+.geo-field select {
+  height: 42px;
+  padding: 0 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+.geo-plus-btndatatabel {
+    background-color: #066fd1;
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: background 0.2s;
+      margin: 10px;
+}
+
+.geo-plus-btndatatabel:hover {
+    background-color: #0052a3;
+}
+
+.geo-plus-btn {
+  background-color: #066fd1;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;   
+  border-radius: 5px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+  transition: background 0.2s;
+
+  margin: 0;           
+  flex-shrink: 0; 
+}
+.geo-color {
+  height: 34px !important;
+  padding: 4px !important;
+}
+.geo-table tbody td {
+    padding: 12px 14px;
+    border-bottom: 0px;
+}
+.geo-actions {
+  
+  display: flex;
+  justify-content: center !important;   /* center horizontally */
+  align-items: center !important;
+  gap: 12px;
+  width: 100%;
+}
+
+.geo-btn {
+  min-width: 90px;
+  height: 36px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.geo-btn-gray {
+  background: #6b7280;
+  color: #fff;
+}
+
+.geo-btn-blue {
+  background: #0d6efd;
+  color: #fff;
+}
+.geo-table td {
+  vertical-align: middle;   /* 👈 IMPORTANT */
+  word-break: break-word;   /* long names break */
+}
+.geo-table td:first-child {
+  white-space: normal;      /* allow 2+ lines */
+  line-height: 1.4;
+}
+.icon.edit,
+.icon.delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  flex-shrink: 0;          /* 👈 prevent squish */
+}
+
+.geo-table th,
+.geo-table td {
+  padding: 10px;
+  padding-left: 0px;
+  border-bottom: none;   /* ❌ remove */
+}
+.geo-table tbody tr {
+  border-bottom: 1px solid #eee;  /* ✅ single line per row */
+}
+.icon.edit {
+  color: #0d6efd;
+}
+
+.icon.edit:hover {
+  background: #d0e6ff;
+}
+
+.icon.delete {
+  color: #dc3545;
+}
+
+.icon.delete:hover {
+  background: #ffd6d6;
+}
+
+.geo-container .datatable-padding{
+    margin-top: -20px;
+}
+
+/* ================= GEO GROUP MODAL ================= */
+
+.geo-group-modal-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* LIST CONTAINER */
+.geo-group-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* EACH ROW */
+.geo-group-item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* INPUT */
+.geo-group-input {
+  color: #000;
+  flex: 1;
+}
+
+/* DELETE BUTTON */
+.geo-group-delete-btn {
+  background: #ff4d4f;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7px;
+}
+
+/* FOOTER */
+.geo-group-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 16px 24px;
+  border-top: 1px solid #eee;
+  background: #fff;
+}

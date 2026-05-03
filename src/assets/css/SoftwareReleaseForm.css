@@ -1,0 +1,94 @@
+/* ================================
+   Container
+================================ */
+.sr-modal-container{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+}
+
+/* Body */
+.sr-modal-body{
+  flex:1;
+  padding:18px;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+/* ================================
+   Form Group
+================================ */
+.sr-form-group{
+  display:flex;
+  flex-direction:column;
+}
+
+.sr-form-group label{
+  font-size:14px;
+  font-weight:500;
+  margin-bottom:6px;
+  color:#333;
+}
+
+/* Inputs */
+.sr-form-group input,
+.sr-form-group textarea{
+  height:40px;
+  border:1px solid #dcdcdc;
+  border-radius:6px;
+  padding:0 12px;
+  font-size:14px;
+  outline:none;
+  transition:0.2s;
+}
+
+.sr-form-group textarea{
+  height:100px;
+  padding:10px 12px;
+  resize:vertical;
+}
+
+/* Focus effect */
+.sr-form-group input:focus,
+.sr-form-group textarea:focus{
+  border-color:#2563eb;
+  box-shadow:0 0 0 2px rgba(37,99,235,0.15);
+}
+
+/* ================================
+   Footer
+================================ */
+.sr-modal-footer{
+  display:flex;
+  justify-content:flex-end;
+  gap:10px;
+  padding:16px 20px;
+  border-top:1px solid #eee;
+}
+
+/* Buttons */
+.sr-btn-secondary{
+  background:#e5e7eb;
+  border:none;
+  padding:8px 18px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.sr-btn-secondary:hover{
+  background:#d1d5db;
+}
+
+.sr-btn-primary{
+  background:#2563eb;
+  color:white;
+  border:none;
+  padding:8px 18px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.sr-btn-primary:hover{
+  background:#1d4ed8;
+}
