@@ -4,7 +4,10 @@ import type { AxiosError, InternalAxiosRequestConfig } from "axios";
 import { tokenService } from "./tokenService";
 import { logout } from "../slices/authSlice";
 import { store } from "../redux/store";
-export const API_BASE_URL = "http://localhost:8091/";
+
+export const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL ??
+  (import.meta.env.DEV ? "/api-proxy" : "http://localhost:8091/");
 
 /* ================= TYPE AUGMENTATION ================= */
 declare module "axios" {

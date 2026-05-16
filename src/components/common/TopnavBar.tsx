@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, useMemo } from "react";
+import { useState, useRef, useEffect, useMemo, useCallback } from "react";
 import { getUsers, type UserDTO } from "../../api/users.api";
 import LogoutModal from "../../features/LogoutModal";
 import "../../assets/css/TopNavbar.css";
@@ -22,6 +22,7 @@ import AlertModal from "./AlertModal";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import CpanelPage from "./CpanelPage";
 import ChatModal from "../../features/chat/ChatModal";
+import AiAgentModal from "../../features/ai-agent/AiAgentModal";
 import { logout } from "../../slices/authSlice";
 import TransportRouteList from "../../features/transport/TransportRouteList";
 import TransportStaffList from "../../features/transport/TransportStaffList"
@@ -47,6 +48,7 @@ const TopNavbar: React.FC<TopNavbarProps> = ({ setActiveTab }) => {
   const [openCommmand, setOpenCommand] = useState(false);
   const [openAlert, setOpenAlert] = useState(false);
   const [openZlm, setOpenZlm] = useState(false);
+  const [openAiAgent, setOpenAiAgent] = useState(false);
   const systemRef = useRef<HTMLDivElement | null>(null);
   const profileRef = useRef<HTMLDivElement | null>(null);
   const transportRef = useRef<HTMLDivElement | null>(null);
@@ -103,11 +105,11 @@ const confirmLogout = async () => {
   );
   const isAdmin = useMemo(() => roles?.includes("ROLE_ADMIN"), [roles]);
 
-  const hasAccess = (name: string) => {
+  const hasAccess = useCallback((name: string) => {
     if (isAdmin) return true;
-    const perm = permissions.find((p: any) => p.permission === name);
+    const perm = permissions.find((p) => p.permission === name);
     return perm?.read === true;
-  };
+  }, [isAdmin, permissions]);
 
   const hasAnySystemAccess = useMemo(() => {
     const items = [
@@ -126,7 +128,7 @@ const confirmLogout = async () => {
     ];
 
     return items.some((name) => hasAccess(name));
-  }, [permissions, isAdmin]);
+  }, [hasAccess]);
 
   const hasTopGroup =
     hasAccess("Alert") ||
@@ -437,6 +439,17 @@ const confirmLogout = async () => {
   </div>
 </li>
                 )}
+                <li>
+                  <div
+                    className="dropdown-item"
+                    onClick={() => {
+                      setOpenDropdown(null);
+                      setOpenAiAgent(true);
+                    }}
+                  >
+                    <i className="bi bi-stars me-2"></i> AI Agent
+                  </div>
+                </li>
               </ul>
             )}
           </div>
@@ -527,6 +540,7 @@ const confirmLogout = async () => {
 
       <CpanelPage open={openZlm} onClose={() => setOpenZlm(false)} />
       <ChatModal open={openChat} onClose={() => setOpenChat(false)} />
+      <AiAgentModal open={openAiAgent} onClose={() => setOpenAiAgent(false)} />
     </div>
   );
 };
