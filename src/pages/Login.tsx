@@ -145,31 +145,31 @@ navigate("/livetrack", { replace: true });    } catch (err) {
                 <svg className="tp-illus" viewBox="0 0 980 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live tracking illustration">
                   <defs>
                     <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0" stop-color="#EEF6FF"/>
-                      <stop offset="1" stop-color="#FFFFFF"/>
+                      <stop offset="0" stopColor="#EEF6FF"/>
+                      <stop offset="1" stopColor="#FFFFFF"/>
                     </linearGradient>
 
                     <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
-                      <feDropShadow dx="0" dy="14" stdDeviation="12" flood-color="#0F172A" flood-opacity=".10"/>
+                      <feDropShadow dx="0" dy="14" stdDeviation="12" floodColor="#0F172A" floodOpacity=".10"/>
                     </filter>
 
                     <filter id="shadowSoft" x="-30%" y="-30%" width="160%" height="180%">
-                      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#0F172A" flood-opacity=".08"/>
+                      <feDropShadow dx="0" dy="10" stdDeviation="10" floodColor="#0F172A" floodOpacity=".08"/>
                     </filter>
 
                     <linearGradient id="pinBlue" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0" stop-color="#1D4ED8"/>
-                      <stop offset="1" stop-color="#0B63D1"/>
+                      <stop offset="0" stopColor="#1D4ED8"/>
+                      <stop offset="1" stopColor="#0B63D1"/>
                     </linearGradient>
 
                     <linearGradient id="pinGreen" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0" stop-color="#22C55E"/>
-                      <stop offset="1" stop-color="#16A34A"/>
+                      <stop offset="0" stopColor="#22C55E"/>
+                      <stop offset="1" stopColor="#16A34A"/>
                     </linearGradient>
 
                     <linearGradient id="pinRed" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0" stop-color="#F87171"/>
-                      <stop offset="1" stop-color="#EF4444"/>
+                      <stop offset="0" stopColor="#F87171"/>
+                      <stop offset="1" stopColor="#EF4444"/>
                     </linearGradient>
                   </defs>
 
@@ -185,9 +185,9 @@ navigate("/livetrack", { replace: true });    } catch (err) {
                         d="M120 225 C 220 165, 310 255, 410 200 S 600 130, 700 185 S 820 270, 920 210"
                         fill="none"
                         stroke="#0B63D1"
-                        stroke-opacity=".35"
-                        stroke-width="4"
-                        stroke-dasharray="6 12"/>
+                        strokeOpacity=".35"
+                        strokeWidth="4"
+                        strokeDasharray="6 12"/>
 
                   <circle r="6" fill="#0B63D1">
                     <animateMotion dur="5.2s" repeatCount="indefinite"
@@ -235,7 +235,7 @@ navigate("/livetrack", { replace: true });    } catch (err) {
                     <circle cx="105" cy="10" r="5" fill="#94A3B8"/>
 
                     <path d="M32 160 C 65 130, 95 176, 130 145 S 160 130, 182 152"
-                          fill="none" stroke="#0B63D1" stroke-opacity=".35" stroke-width="3" stroke-dasharray="5 9"/>
+                          fill="none" stroke="#0B63D1" strokeOpacity=".35" strokeWidth="3" strokeDasharray="5 9"/>
                     <circle cx="76" cy="150" r="5" fill="#0B63D1">
                       <animate attributeName="cx" values="76;150;76" dur="4.8s" repeatCount="indefinite"/>
                       <animate attributeName="cy" values="150;145;150" dur="4.8s" repeatCount="indefinite"/>

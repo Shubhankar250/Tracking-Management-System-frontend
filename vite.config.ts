@@ -12,5 +12,13 @@ export default defineConfig({
   server: {
     host: "127.0.0.1",
     port: 3000,
+    proxy: {
+      "/api-proxy": {
+        target: "http://localhost:8091",
+        changeOrigin: true,
+        ws: true,
+        rewrite: (path) => path.replace(/^\/api-proxy/, ""),
+      },
+    },
   },
 });
